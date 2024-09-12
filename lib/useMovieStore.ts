@@ -14,6 +14,7 @@ interface MovieStore {
   setMovies: (movies: Movie[]) => void;
   setSearchText: (text: string) => void;
   filterMovies: () => void;
+  clearSearch: () => void;
 }
 
 export const useMovieStore = create<MovieStore>((set) => ({
@@ -41,5 +42,11 @@ export const useMovieStore = create<MovieStore>((set) => ({
       filteredMovies: state.movies.filter((movie) =>
         movie.title.toLowerCase().includes(state.searchText.toLowerCase())
       ),
+    })),
+
+  clearSearch: () =>
+    set((state) => ({
+      searchText: "",
+      filteredMovies: state.movies,
     })),
 }));

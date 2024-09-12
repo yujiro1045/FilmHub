@@ -5,3 +5,5 @@ export const TOKEN: string =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NGE2NmZiNGY4M2ZhY2I2MzJhNWU4N2UzN2I5ZmU5NiIsIm5iZiI6MTcyMzUwMzcxNi44MTY0MTQsInN1YiI6IjY2YmE4YmVmOWZlNTE4MGVhMTNlZjMzYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BZhVnskJw3ea8akSyKQD7iBJnsI9CG4PR6TF-vm_sYo";
 
 export const IMAGE_URL: string = "https://image.tmdb.org/t/p/original";
+
+export const API_KEY: string = "74a66fb4f83facb632a5e87e37b9fe96";

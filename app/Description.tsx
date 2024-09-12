@@ -25,9 +25,6 @@ export default function Description() {
   const { id, overview, title, poster_path } = params as DescriptionParams;
   const { addFavorite, favorite, removeFavorite } = useFavoriteStore();
 
-  /* console.log("params:", params);
-  console.log("ID:", id); */
-
   const isFavorite = favorite.some((fav) => fav.id === id);
 
   const toggleFavorite = () => {
@@ -85,6 +82,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   cardContainer: {
+    width: 350,
     borderWidth: 2,
     borderColor: "red",
     borderRadius: 15,
@@ -94,7 +92,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   card1: {
-    width: "70%",
+    width: 200,
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
@@ -106,20 +104,19 @@ const styles = StyleSheet.create({
     padding: 15,
     alignItems: "center",
     flexDirection: "row",
-    gap: 3,
     marginBottom: 10,
     shadowColor: "red",
     elevation: 4,
     backgroundColor: "#fff",
+    justifyContent: "center",
   },
   icon: { padding: 5 },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     color: "#000",
-    textAlign: "justify",
+    textAlign: "center",
     padding: 10,
-    alignSelf: "center",
   },
   errorText: {
     color: "#fff",
@@ -130,7 +127,8 @@ const styles = StyleSheet.create({
     color: "#000",
   },
   imageContainer: {
-    width: "100%",
+    width: 214,
+    height: 294,
     marginBottom: 10,
     borderRadius: 10,
     shadowColor: "#FC2214",

@@ -49,3 +49,7 @@ export const SearchIcon: FC<IconProps> = (props) => (
 export const HomeIcon: FC<IconProps> = (props) => (
   <Entypo name="home" size={28} color="black" {...props} />
 );
+
+export const CancelIcon: FC<IconProps> = (props) => (
+  <MaterialIcons name="cancel" size={24} color="black" {...props} />
+);

@@ -22,6 +22,7 @@ export default function Layout() {
             <InfoIcon />
           </Link>
         ),
+        animation: "slide_from_left",
       }}
     >
       <Stack.Screen name="tabs" />
