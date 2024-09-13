@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { useRouter } from "expo-router";
 import { IMAGE_URL } from "../constants";
 
 type MovieCardProps = {

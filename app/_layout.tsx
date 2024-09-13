@@ -5,27 +5,27 @@ import { FavoriteIcon, InfoIcon } from "../icons/icons";
 export default function Layout() {
   return (
     <Stack
-      initialRouteName="tabs"
       screenOptions={{
         headerStyle: {
           backgroundColor: "red",
         },
+        title: "FilmHub",
         headerTintColor: "#fff",
         headerTitleAlign: "center",
         headerRight: () => (
-          <Link href={"/tabs/favorites"}>
+          <Link href={"/favorites"}>
             <FavoriteIcon />
           </Link>
         ),
         headerLeft: () => (
-          <Link href={"/tabs/About"}>
+          <Link href={"/About"}>
             <InfoIcon />
           </Link>
         ),
         animation: "slide_from_left",
       }}
     >
-      <Stack.Screen name="tabs" />
+      <Stack.Screen name="(tabs)" />
       <Stack.Screen name="Description" />
     </Stack>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_URL, TOKEN } from "../constants";
+import { useMovieStore } from "./useMovieStore";
 
 interface Movie {
   id: number;
@@ -9,7 +10,9 @@ interface Movie {
 }
 
 export default function useFetchMovies() {
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const { filteredMovies, setMovies, searchText, setSearchText } =
+    useMovieStore();
 
   useEffect(() => {
     fetch(API_URL, {
@@ -25,9 +28,7 @@ export default function useFetchMovies() {
       .then((data) => {
         if (data && data.results) {
           setMovies(data.results as Movie[]);
-          data.results.map((movie: Movie) => {
-            console.log("poster_path:", movie.poster_path);
-          });
+          setIsLoading(false);
         } else {
           console.log("No results found in data");
         }
@@ -37,5 +38,5 @@ export default function useFetchMovies() {
       });
   }, []);
 
-  return movies;
+  return { filteredMovies, searchText, setSearchText, isLoading };
 }

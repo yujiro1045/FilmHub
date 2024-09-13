@@ -33,7 +33,6 @@ export default function Favorites() {
       <FlatList
         data={favorite}
         keyExtractor={(item) => {
-          console.log({ item });
           return item.id.toString();
         }}
         renderItem={({ item }) => (

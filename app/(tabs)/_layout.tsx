@@ -3,10 +3,7 @@ import { FavoriteIcon, HomeIcon, InfoIcon } from "../../icons/icons";
 
 export default function TabsLayout() {
   return (
-    <Tabs
-      initialRouteName="index"
-      screenOptions={{ headerShown: false, headerTitle: "Home" }}
-    >
+    <Tabs screenOptions={{ headerShown: false, headerTitle: "Home" }}>
       <Tabs.Screen
         name="index"
         options={{ title: "Home", tabBarIcon: () => <HomeIcon /> }}
