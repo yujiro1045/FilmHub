@@ -30,6 +30,7 @@ export default function Favorites() {
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ title: "Favorites", headerRight: null }} />
+      <Text style={styles.headerText}>Mi lista de favotiros</Text>
       <FlatList
         data={favorite}
         keyExtractor={(item) => {
@@ -60,6 +61,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",
+  },
+  headerText: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "#000",
+    marginVertical: 10,
+    marginLeft: 15,
   },
   cardFavorite: {
     margin: 5,
